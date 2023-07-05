@@ -1,21 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View ,StyleProp} from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-
-
-type ValueProps={
-  label:string;
-  value:string;
-
-}
-
-const Records=( {label,value}:ValueProps)=>(
-  
-<View style={styles.valueContainer}>
-<Text style={styles.label}>{label}</Text>
-<Text style={styles.value} >{value}</Text>
-</View> 
-)
+import Records from './src/components/Records';
 
 export default function App() {
   return (
@@ -26,11 +11,8 @@ export default function App() {
 
   <Records label="steps" value="12351"/>
   <Records label="Distance" value="0.6823km"/>
-  <Records label="flights Climbed" value="22km"/> 
+  <Records label="flights Climbed" value="22"/> 
 </View>
-
-
-  
 
 
       <StatusBar style="auto" />
@@ -38,24 +20,22 @@ export default function App() {
   );
 }
 
+
+
+
 const styles = StyleSheet.create({
-  Values:{
+
+Values:{
 flexDirection:'row',
 gap:25,
 flexWrap:"wrap"
   },
-  container: {
+container: {
     flex: 1,
     backgroundColor: "black",
     padding:12,
     justifyContent: 'center',
   },
-  valueContainer:{
-
-  
-
-  },
-  label:{color:"white",fontWeight:"600",fontSize:20},
-  value:{fontSize:45,color:"white",fontWeight:"600"},
-
 });
+
+
