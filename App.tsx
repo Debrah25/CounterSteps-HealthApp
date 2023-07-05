@@ -7,7 +7,7 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-<RingProgress progress={0.35}/>
+<RingProgress progress={0.5}/>
 
 
 
@@ -40,7 +40,7 @@ flexDirection:'row',
 gap:25,
 flexWrap:"wrap"
 ,
-marginTop:50,
+marginTop:110,
   },
 container: {
     flex: 1,
