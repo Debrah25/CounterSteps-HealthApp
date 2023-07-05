@@ -22,14 +22,14 @@ export default function App() {
     <View style={styles.container}>
       <Text>Hello</Text>
 
- <View style={{flexDirection:"row"}}>
+ <View style={styles.Values}>
 
   <Records label="steps" value="12351"/>
   <Records label="Distance" value="0.6823km"/>
-  
+  <Records label="flights Climbed" value="22km"/> 
 </View>
 
-<Records label="flights Climbed" value="22km"/>
+
   
 
 
@@ -39,6 +39,11 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  Values:{
+flexDirection:'row',
+gap:25,
+flexWrap:"wrap"
+  },
   container: {
     flex: 1,
     backgroundColor: "black",
@@ -46,11 +51,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   valueContainer:{
-marginRight:50,
-marginVertical:20 
+
+  
 
   },
   label:{color:"white",fontWeight:"600",fontSize:20},
-  value:{fontSize:35,color:"white",fontWeight:"600"},
+  value:{fontSize:45,color:"white",fontWeight:"600"},
 
 });
